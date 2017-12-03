@@ -1,0 +1,171 @@
+/* -------------------------------------------------------------------- */
+/* ------------------------------- list ------------------------------- */
+/* -------------------------------------------------------------------- */
+.blog-list > .item
+	{
+	display: flex;
+	flex-wrap: wrap;
+	width: 70%;
+	}
+.blog-list > .item:not(:last-child)
+	{
+	border-bottom: 1px solid #F0F0F0;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	}
+.blog-list > .item > .title
+	{
+	font-size: calc(1em + 5px);
+	overflow: hidden;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 50%;
+	}
+.blog-list > .item > .title:hover,
+.blog-list > .item > .title:active,
+.blog-list > .item > .title:focus {text-decoration: underline}
+
+.blog-list > .item > .info
+	{
+	color: #999;
+	display: flex;
+	font-size: calc(1em - 2px);
+	justify-content: flex-end;
+	width: 50%;
+	}
+.blog-list > .item > .info > *:not(:last-child) {margin-right: 10px}
+
+.blog-list > .item > .text
+	{
+	margin-top: 10px;
+	width: 100%;
+	}
+/* -------------------------------------------------------------------- */
+/* ------------------------------- pager ------------------------------ */
+/* -------------------------------------------------------------------- */
+.blog-list-pager
+	{
+	display: flex;
+	margin-top: 20px;
+	}
+.blog-list-pager > a
+	{
+	align-items: center;
+	border: 1px solid #F0F0F0;
+	border-radius: 10px;
+	color: #959494;
+	display: flex;
+	justify-content: center;
+	line-height: 20px;
+	text-decoration: none;
+	transition: .3s;
+	width:  20px;
+	height: 20px;
+	}
+.blog-list-pager > a.selected,
+.blog-list-pager > a:hover,
+.blog-list-pager > a:active,
+.blog-list-pager > a:focus            {background-color: #F0F0F0}
+.blog-list-pager > a:not(:last-child) {margin-right: 5px}
+/* -------------------------------------------------------------------- */
+/* -------------------------- add form button ------------------------- */
+/* -------------------------------------------------------------------- */
+.blog-list-add-form-call-button
+	{
+	border: 1px solid #F0F0F0;
+	border-radius: 2px;
+	color: #959494;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: bold;
+	outline: none;
+	padding: 2px 10px;
+	margin-top: 20px;
+	transition: .3s;
+	width: auto;
+	}
+.blog-list-add-form-call-button:hover,
+.blog-list-add-form-call-button:active,
+.blog-list-add-form-call-button:focus
+	{
+	background-color: #F0F0F0;
+	}
+/* -------------------------------------------------------------------- */
+/* ----------------------------- add form ----------------------------- */
+/* -------------------------------------------------------------------- */
+.blog-list-add-form
+	{
+	background-color: #F0F0F0;
+	display: none;
+	margin-top: 20px;
+	padding: 10px;
+	width: 35%;
+	}
+.blog-list-add-form > .row
+	{
+	display: flex;
+	}
+.blog-list-add-form > .row > *
+	{
+	padding: 5px;
+	}
+.blog-list-add-form > .row > *:nth-child(1)
+	{
+	text-align: right;
+	width: 30%;
+	}
+.blog-list-add-form > .row > *:nth-child(2)
+	{
+	width: 70%;
+	}
+.blog-list-add-form input,
+.blog-list-add-form textarea
+	{
+	border: 1px solid #C2C2C2;
+	border-radius: 2px;
+	display: block;
+	padding: 3px;
+	width: calc(100% - 3px * 2);
+	}
+.blog-list-add-form textarea
+	{
+	height: 100px;
+	resize: none;
+	}
+.blog-list-add-form input:focus,
+.blog-list-add-form textarea:focus {outline: none}
+
+.blog-list-add-form button
+	{
+	background-color: #FFF;
+	border: 1px solid #C2C2C2;
+	border-radius: 2px;
+	color: #959494;
+	cursor: pointer;
+	font-weight: bold;
+	margin:  0 0 0 calc(100% - 100px - 3px);
+	outline: none;
+	padding: 3px 0;
+	text-align: center;
+	transition: .3s;
+	width: 100px;
+	}
+/* -------------------------------------------------------------------- */
+/* ------------------------------- media ------------------------------ */
+/* -------------------------------------------------------------------- */
+@media (max-width: 991px)
+	{
+	.blog-list > .item  {width: 100%}
+	.blog-list-add-form {width: calc(100% - 10px * 2)}
+	}
+@media (max-width: 767px)
+	{
+	.blog-list > .item > .title {width: 100%}
+	.blog-list > .item > .info 
+		{
+		justify-content: flex-start;
+		margin-top: 10px;
+		width: 100%;
+		}
+	}
